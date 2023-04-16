@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarvelHerosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-ao-Cv1" customClass="FigureCard" customModule="MarvelHerosApp" customModuleProvider="target">
+                                <rect key="frame" x="120" y="89" width="150" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="28J-KY-08W"/>
+                                    <constraint firstAttribute="width" constant="150" id="vSN-PP-vXZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-gL-9Lz">
+                                <rect key="frame" x="157.66666666666666" y="727" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cMU-Z8-dCM"/>
+                                    <constraint firstAttribute="width" constant="75" id="q2z-CI-zKC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onClickTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmT-sD-I5G"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Uq-dR-7BQ" customClass="LabeledCard" customModule="MarvelHerosApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="359" width="370" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ifX-A5-0tf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pft-gL-9Lz" secondAttribute="bottom" constant="48" id="2z4-rI-tKq"/>
+                            <constraint firstItem="F6Q-ao-Cv1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6dA-IY-mTN"/>
+                            <constraint firstItem="Pft-gL-9Lz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9J0-ZJ-dMH"/>
+                            <constraint firstItem="1Uq-dR-7BQ" firstAttribute="top" secondItem="F6Q-ao-Cv1" secondAttribute="bottom" constant="50" id="gyC-FC-MpP"/>
+                            <constraint firstItem="F6Q-ao-Cv1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="tQw-Va-EW7"/>
+                            <constraint firstItem="1Uq-dR-7BQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wIk-Ng-EuQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Uq-dR-7BQ" secondAttribute="trailing" constant="10" id="wKy-wG-h11"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="figureCard" destination="F6Q-ao-Cv1" id="rd6-xa-ugG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
