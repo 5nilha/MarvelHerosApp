@@ -18,6 +18,8 @@
 		B7C484D029E7569B005CD10B /* MarvelHerosAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C484CF29E7569B005CD10B /* MarvelHerosAppUITestsLaunchTests.swift */; };
 		B7C4850229EA0F04005CD10B /* FigureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850129EA0F04005CD10B /* FigureCard.swift */; };
 		B7C4850429EA57A0005CD10B /* LabeledCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850329EA57A0005CD10B /* LabeledCard.swift */; };
+		B7C4850A29EC6381005CD10B /* FigureCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850929EC6381005CD10B /* FigureCardTest.swift */; };
+		B7C4850C29EC6795005CD10B /* LabeledCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B7C484CF29E7569B005CD10B /* MarvelHerosAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHerosAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7C4850129EA0F04005CD10B /* FigureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureCard.swift; sourceTree = "<group>"; };
 		B7C4850329EA57A0005CD10B /* LabeledCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCard.swift; sourceTree = "<group>"; };
+		B7C4850929EC6381005CD10B /* FigureCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureCardTest.swift; sourceTree = "<group>"; };
+		B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCardTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		B7C484C229E7569B005CD10B /* MarvelHerosAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				B7C4850829EC636B005CD10B /* Views */,
 				B7C484C329E7569B005CD10B /* MarvelHerosAppTests.swift */,
 			);
 			path = MarvelHerosAppTests;
@@ -147,6 +152,15 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7C4850829EC636B005CD10B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7C4850929EC6381005CD10B /* FigureCardTest.swift */,
+				B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C4850C29EC6795005CD10B /* LabeledCardTest.swift in Sources */,
 				B7C484C429E7569B005CD10B /* MarvelHerosAppTests.swift in Sources */,
+				B7C4850A29EC6381005CD10B /* FigureCardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

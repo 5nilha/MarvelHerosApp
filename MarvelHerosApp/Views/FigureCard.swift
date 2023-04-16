@@ -13,7 +13,7 @@ import UIKit
     private var hightligtedColor: UIColor = .red
     private var primaryViewColor: UIColor = .black
     
-    private var imageView: UIImageView = {
+    private (set) var imageView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.clipsToBounds = true
@@ -21,7 +21,7 @@ import UIKit
         return imgView
     }()
     
-    private var titleView: UILabel = {
+    private (set) var titleView: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 16)

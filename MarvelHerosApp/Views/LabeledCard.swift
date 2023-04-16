@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable class LabeledCard: UIView {
     
-    private var imageView: UIImageView = {
+    private (set) var imageView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.clipsToBounds = true
@@ -25,7 +25,7 @@ import UIKit
         return view
     }()
     
-    private var headLineView: UILabel = {
+    private (set) var headLineView: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -36,7 +36,7 @@ import UIKit
         return label
     }()
     
-    private var infoView: UILabel = {
+    private (set) var infoView: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 13)
@@ -105,6 +105,24 @@ import UIKit
             infoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
             infoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6)
         ])
+    }
+    
+    @IBInspectable var image: UIImage? {
+        didSet {
+            imageView.image = image
+        }
+    }
+    
+    @IBInspectable var headline: String? {
+        didSet {
+            headLineView.text = headline
+        }
+    }
+    
+    @IBInspectable var info: String? {
+        didSet {
+            infoView.text = info
+        }
     }
     
 }
