@@ -24,10 +24,32 @@ final class FigureCardTest: XCTestCase {
     }
 
     func testHightlightingOnClick() {
+        figureCard.primaryViewColor = .blue
+        figureCard.separatorColor = .yellow
+        
+        XCTAssertEqual(figureCard.backgroundColor, .blue)
+        XCTAssertEqual(figureCard.hightligtedColor, .yellow)
+        
         figureCard.isHightlighted = true
-        XCTAssertEqual(figureCard.backgroundColor, .red)
+        XCTAssertEqual(figureCard.backgroundColor, .yellow)
+        XCTAssertEqual(figureCard.primaryViewColor, .blue)
         
         figureCard.isHightlighted = false
-        XCTAssertEqual(figureCard.backgroundColor, .black)
+        XCTAssertEqual(figureCard.backgroundColor, .blue)
+        XCTAssertEqual(figureCard.primaryViewColor, .blue)
+    }
+    
+    func testComponentColorsSetters() {
+        figureCard.primaryViewColor = .blue
+        XCTAssertEqual(figureCard.backgroundColor, .blue)
+        
+        figureCard.separatorColor = .yellow
+        XCTAssertEqual(figureCard.separatorColor, .yellow)
+        XCTAssertEqual(figureCard.hightligtedColor, .yellow)
+        XCTAssertEqual(figureCard.backgroundColor, .blue)
+        
+        figureCard.titleColor = .green
+        XCTAssertEqual(figureCard.titleColor, .green)
+        XCTAssertEqual(figureCard.backgroundColor, .blue)
     }
 }

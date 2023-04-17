@@ -20,6 +20,8 @@
 		B7C4850429EA57A0005CD10B /* LabeledCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850329EA57A0005CD10B /* LabeledCard.swift */; };
 		B7C4850A29EC6381005CD10B /* FigureCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850929EC6381005CD10B /* FigureCardTest.swift */; };
 		B7C4850C29EC6795005CD10B /* LabeledCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */; };
+		B7C4850F29EC6A9A005CD10B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4850E29EC6A9A005CD10B /* Colors.swift */; };
+		B7C4851429ECB462005CD10B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4851329ECB462005CD10B /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B7C4850329EA57A0005CD10B /* LabeledCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCard.swift; sourceTree = "<group>"; };
 		B7C4850929EC6381005CD10B /* FigureCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureCardTest.swift; sourceTree = "<group>"; };
 		B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCardTest.swift; sourceTree = "<group>"; };
+		B7C4850E29EC6A9A005CD10B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B7C4851329ECB462005CD10B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		B7C484AB29E75699005CD10B /* MarvelHerosApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7C4850D29EC6A82005CD10B /* Core */,
 				B7C4850529EB14B7005CD10B /* Extensions */,
 				B7C4850029EA0C3B005CD10B /* Views */,
 				B7C484AC29E75699005CD10B /* AppDelegate.swift */,
@@ -143,6 +148,7 @@
 			children = (
 				B7C4850129EA0F04005CD10B /* FigureCard.swift */,
 				B7C4850329EA57A0005CD10B /* LabeledCard.swift */,
+				B7C4851329ECB462005CD10B /* ListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +167,14 @@
 				B7C4850B29EC6795005CD10B /* LabeledCardTest.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B7C4850D29EC6A82005CD10B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B7C4850E29EC6A9A005CD10B /* Colors.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C4850429EA57A0005CD10B /* LabeledCard.swift in Sources */,
+				B7C4850F29EC6A9A005CD10B /* Colors.swift in Sources */,
 				B7C484B129E75699005CD10B /* ViewController.swift in Sources */,
+				B7C4851429ECB462005CD10B /* ListCell.swift in Sources */,
 				B7C484AD29E75699005CD10B /* AppDelegate.swift in Sources */,
 				B7C484AF29E75699005CD10B /* SceneDelegate.swift in Sources */,
 				B7C4850229EA0F04005CD10B /* FigureCard.swift in Sources */,

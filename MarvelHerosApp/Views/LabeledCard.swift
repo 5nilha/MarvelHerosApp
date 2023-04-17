@@ -7,44 +7,7 @@
 
 import UIKit
 
-@IBDesignable class LabeledCard: UIView {
-    
-    private (set) var imageView: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
-        imgView.image = UIImage(named: "img_test")
-        imgView.sizeToFit()
-        return imgView
-    }()
-    
-    private var vSeparator: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
-        return view
-    }()
-    
-    private (set) var headLineView: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "I'm a Hero"
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    private (set) var infoView: UILabel = {
-        let label = UILabel()
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "I'm the super hero who will save the world."
-        return label
-    }()
+@IBDesignable final class LabeledCard: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,17 +24,106 @@ import UIKit
     }
     
     private func commonInit() {
-        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        self.backgroundColor = .white
-        self.layer.cornerRadius = 30
-        setShadow()
         setConstraints()
-        
+        reloadViewColors()
+        setCorners()
+        setShadow()
     }
     
-    private func setupCorners() {
+    private (set) var imageView: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.clipsToBounds = true
+        imgView.image = UIImage(named: "img_test")
+        imgView.sizeToFit()
+        return imgView
+    }()
+    
+    private var vSeparator: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private (set) var headLineView: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "I'm a Hero"
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private (set) var infoView: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "I'm the super hero who will save the world."
+        return label
+    }()
+    
+    @IBInspectable var primaryViewColor: UIColor? = Colors.white {
+        didSet {
+            super.backgroundColor = primaryViewColor
+        }
+    }
+    
+    @IBInspectable var headLineColor: UIColor? = Colors.black {
+        didSet {
+            headLineView.textColor = headLineColor
+        }
+    }
+    
+    @IBInspectable var infoColor: UIColor? = Colors.darkGray {
+        didSet {
+            infoView.textColor = infoColor
+        }
+    }
+    
+    @IBInspectable var separatorColor: UIColor? = Colors.red {
+        didSet {
+            vSeparator.backgroundColor = separatorColor
+        }
+    }
+    
+    override var backgroundColor: UIColor? {
+        get {
+            return super.backgroundColor
+        } set {
+            primaryViewColor = newValue
+        }
+    }
+    
+    
+    @IBInspectable var image: UIImage? {
+        didSet {
+            imageView.image = image
+        }
+    }
+    
+    @IBInspectable var headline: String? {
+        didSet {
+            headLineView.text = headline
+        }
+    }
+    
+    @IBInspectable var info: String? {
+        didSet {
+            infoView.text = info
+        }
+    }
+    
+    private func reloadViewColors() {
+        backgroundColor = primaryViewColor
+        headLineView.textColor = headLineColor
+        infoView.textColor = infoColor
+        vSeparator.backgroundColor = separatorColor
+    }
+    
+    private func setCorners() {
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        self.backgroundColor = .white
         self.layer.cornerRadius = 30
     }
     
@@ -106,23 +158,4 @@ import UIKit
             infoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6)
         ])
     }
-    
-    @IBInspectable var image: UIImage? {
-        didSet {
-            imageView.image = image
-        }
-    }
-    
-    @IBInspectable var headline: String? {
-        didSet {
-            headLineView.text = headline
-        }
-    }
-    
-    @IBInspectable var info: String? {
-        didSet {
-            infoView.text = info
-        }
-    }
-    
 }

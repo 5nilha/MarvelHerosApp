@@ -18,7 +18,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6Q-ao-Cv1" customClass="FigureCard" customModule="MarvelHerosApp" customModuleProvider="target">
                                 <rect key="frame" x="120" y="89" width="150" height="220"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="28J-KY-08W"/>
                                     <constraint firstAttribute="width" constant="150" id="vSN-PP-vXZ"/>
@@ -42,6 +41,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ifX-A5-0tf"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondaryViewColor">
+                                        <color key="value" red="0.99766427280000003" green="0.83589178320000002" blue="0.47443050149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

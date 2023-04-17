@@ -28,4 +28,23 @@ final class LabeledCardTest: XCTestCase {
         XCTAssertEqual(labeledCard.infoView.text, labeledCard.info)
         XCTAssertFalse(labeledCard.infoView.isHidden)
     }
+    
+    func testComponentColorsSetters() {
+        labeledCard.primaryViewColor = .blue
+        XCTAssertEqual(labeledCard.backgroundColor, .blue)
+        
+        labeledCard.separatorColor = .yellow
+        XCTAssertEqual(labeledCard.separatorColor, .yellow)
+        XCTAssertEqual(labeledCard.backgroundColor, .blue)
+        
+        labeledCard.headLineColor = .yellow
+        XCTAssertEqual(labeledCard.headLineColor, .yellow)
+        XCTAssertEqual(labeledCard.headLineView.textColor, .yellow)
+        XCTAssertEqual(labeledCard.backgroundColor, .blue)
+        
+        labeledCard.infoColor = .green
+        XCTAssertEqual(labeledCard.infoColor, .green)
+        XCTAssertEqual(labeledCard.infoView.textColor, .green)
+        XCTAssertEqual(labeledCard.backgroundColor, .blue)
+    }
 }
